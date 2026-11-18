@@ -1,0 +1,6 @@
+PENDING — no video has been recorded yet.
+
+Record a 3–5 minute unlisted Loom following the outline in SUBMISSION.md,
+then replace this file's contents with the URL, for example:
+
+https://www.loom.com/share/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

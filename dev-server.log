@@ -1,0 +1,104 @@
+npm notice run ajaia-docs@0.1.0 dev
+npm notice run next dev
+▲ Next.js 16.4.6 (Turbopack)
+- Local:         http://localhost:56781
+- Network:       http://192.168.44.114:56781
+✓ Ready in 1331ms
+✓ Running next.config.ts took 74ms
+
+ GET /login 200 in 1644ms (next.js: 778ms, application-code: 865ms)
+ GET /login 200 in 221ms (next.js: 3ms, application-code: 217ms)
+ GET /login 200 in 99ms (next.js: 2ms, application-code: 97ms)
+ GET /login 200 in 124ms (next.js: 3ms, application-code: 121ms)
+ GET /login 200 in 107ms (next.js: 3ms, application-code: 105ms)
+ GET /signup 200 in 96ms (next.js: 32ms, application-code: 64ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.create()` invocation in
+D:\Machine_Task\MachineTask-main\.next\dev\server\chunks\[root-of-the-server]__0irouoc6o495v._.js:122:154
+
+  119 }
+  120 const passwordHash = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$login$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["hashPassword"])(parsed.data.password);
+  121 try {
+→ 122     const user = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.create(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider  = "postgresql"
+ 7 |   url       = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+Signup failed.
+ POST /api/signup 500 in 551ms (next.js: 168ms, application-code: 382ms)
+ GET /login 200 in 39ms (next.js: 3ms, application-code: 36ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.findUnique()` invocation in
+D:\Machine_Task\MachineTask-main\.next\dev\server\chunks\[root-of-the-server]__0irouoc6o495v._.js:330:150
+
+  327 const DUMMY_PASSWORD_HASH = "$2b$12$IUIc1WqvtA3glzuofNK/ouaS6oL1hxVDYT7cCh.b.j9r5N.OCRm4G";
+  328 async function authenticate(emailInput, password) {
+  329     const email = emailInput.trim().toLowerCase();
+→ 330     const user = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider  = "postgresql"
+ 7 |   url       = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+⨯ Error [PrismaClientInitializationError]: 
+Invalid `{imported module ./src/lib/db.ts}["db"].user.findUnique()` invocation in
+D:\Machine_Task\MachineTask-main\.next\dev\server\chunks\[root-of-the-server]__0irouoc6o495v._.js:330:150
+
+  327 const DUMMY_PASSWORD_HASH = "$2b$12$IUIc1WqvtA3glzuofNK/ouaS6oL1hxVDYT7cCh.b.j9r5N.OCRm4G";
+  328 async function authenticate(emailInput, password) {
+  329     const email = emailInput.trim().toLowerCase();
+→ 330     const user = await {imported module ./src/lib/db.ts}["db"].user.findUnique(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider  = "postgresql"
+ 7 |   url       = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at async authenticate (src\lib\login.ts:48:16)
+    at async POST (src\app\api\login\route.ts:21:18)
+  46 | ): Promise<AuthResult> {
+  47 |   const email = emailInput.trim().toLowerCase();
+> 48 |   const user = await db.user.findUnique({
+     |                ^
+  49 |     where: { email },
+  50 |     select: {
+  51 |       id: true, {
+  clientVersion: '6.19.3',
+  errorCode: undefined,
+  retryable: undefined
+}
+ POST /api/login 500 in 364ms (next.js: 41ms, application-code: 323ms)
+ GET /signup 200 in 62ms (next.js: 6ms, application-code: 56ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.create()` invocation in
+D:\Machine_Task\MachineTask-main\.next\dev\server\chunks\[root-of-the-server]__0irouoc6o495v._.js:122:154
+
+  119 }
+  120 const passwordHash = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$login$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["hashPassword"])(parsed.data.password);
+  121 try {
+→ 122     const user = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].user.create(
+error: Environment variable not found: DATABASE_URL.
+  -->  schema.prisma:7
+   | 
+ 6 |   provider  = "postgresql"
+ 7 |   url       = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+Signup failed.
+ POST /api/signup 500 in 301ms (next.js: 2ms, application-code: 299ms)
+  Reload env: .env
+ GET /signup 200 in 263ms (next.js: 138ms, application-code: 125ms)
+ GET /login 200 in 88ms (next.js: 28ms, application-code: 60ms)
+ GET /signup 200 in 291ms (next.js: 99ms, application-code: 193ms)
+ GET /login 200 in 124ms (next.js: 38ms, application-code: 86ms)
+[?25h
